@@ -335,3 +335,7 @@ async def fff(callback_query: types.CallbackQuery):
 @dp.message_handler()
 async def fff(message: types.Message):
 	await message.answer('Я Вас не понимаю. Обратитесь, пожалуйста, к администратору', reply_markup= admin_menu)
+
+if __name__ == '__main__':
+	loop = asyncio.get_event_loop()
+	executor.start_polling(dp)
